@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Ilmizo — Adult & Kids Islamic Learning, Hifz, Salah & Tarbiyah</title>
+    <meta name="description" content="A complete offline-first, multi-language Islamic learning platform for adults, children, and families featuring 114 Surahs, Hifz Mastery Studio, Salah Tracker, Kids 3D Learning World, Parent Hub, and Daily Task & Sadaqah Tracker." />
+    <meta property="og:title" content="Ilmizo — Adult & Kids Islamic Learning, Hifz, Salah & Tarbiyah" />
+    <meta property="og:description" content="A complete offline-first, multi-language Islamic learning platform for adults, children, and families featuring 114 Surahs, Hifz Mastery Studio, Salah Tracker, Kids 3D Learning World, Parent Hub, and Daily Task & Sadaqah Tracker." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0F3826" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Ilmizo" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Lateef:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('ilmizo_theme_mode_v1');
+          var mode = stored === 'dark' || stored === 'light' || stored === 'system' ? stored : null;
+          if (!mode) {
+            var legacyRaw = localStorage.getItem('ilmizo_master_state_v1');
+            if (legacyRaw) {
+              var legacy = JSON.parse(legacyRaw);
+              if (legacy && legacy.user && legacy.user.themeMode) {
+                mode = legacy.user.themeMode;
+              } else if (legacy && legacy.user && legacy.user.darkMode === true) {
+                mode = 'dark';
+              }
+            }
+          }
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var resolved = mode === 'dark' ? 'dark' : mode === 'system' ? (prefersDark ? 'dark' : 'light') : 'light';
+          if (resolved === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+          document.documentElement.setAttribute('data-theme', resolved);
+          document.documentElement.style.colorScheme = resolved;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[var(--bg-app)] text-[var(--text-primary)] antialiased selection:bg-emerald-700 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,38 @@
+{
+  "id": "/",
+  "name": "Ilmizo — Islamic Learning & Kids Tarbiyah",
+  "short_name": "Ilmizo",
+  "description": "Offline-first, local-first Islamic learning platform for adults, children, and families with 114 Surahs, Hifz Mastery, Salah Tracker, Kids 3D Learning World, and Parent Hub.",
+  "theme_color": "#0F3826",
+  "background_color": "#FDFBF7",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

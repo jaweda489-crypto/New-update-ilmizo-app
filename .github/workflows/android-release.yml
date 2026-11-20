@@ -1,0 +1,65 @@
+name: Build Ilmizo Android APK & Play Store AAB
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install dependencies & build web bundle
+        run: |
+          npm ci
+          npm run build
+          npx cap sync android
+
+      - name: Restore optional Play Store upload keystore from GitHub Secrets
+        if: ${{ secrets.ILMIZO_KEYSTORE_BASE64 != '' }}
+        env:
+          ILMIZO_KEYSTORE_BASE64: ${{ secrets.ILMIZO_KEYSTORE_BASE64 }}
+          ILMIZO_KEYSTORE_PASSWORD: ${{ secrets.ILMIZO_KEYSTORE_PASSWORD }}
+          ILMIZO_KEY_ALIAS: ${{ secrets.ILMIZO_KEY_ALIAS }}
+          ILMIZO_KEY_PASSWORD: ${{ secrets.ILMIZO_KEY_PASSWORD }}
+        run: |
+          echo "$ILMIZO_KEYSTORE_BASE64" | base64 -d > android/release-upload.jks
+          cat <<EOF > android/keystore.properties
+          storeFile=release-upload.jks
+          storePassword=$ILMIZO_KEYSTORE_PASSWORD
+          keyAlias=$ILMIZO_KEY_ALIAS
+          keyPassword=$ILMIZO_KEY_PASSWORD
+          EOF
+
+      - name: Build Debug APK & Play Store Release AAB
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug bundleRelease
+
+      - name: Upload APK & AAB Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ilmizo-android-builds
+          path: |
+            android/app/build/outputs/apk/debug/app-debug.apk
+            android/app/build/outputs/bundle/release/app-release.aab

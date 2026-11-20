@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Ilmizo: Islamic Learning &amp; Family Tarbiyah</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #fdfbf7;
+        color: #1e293b;
+        margin: 0;
+        padding: 24px 16px 48px;
+        line-height: 1.65;
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        background: #ffffff;
+        border: 1px solid rgba(20, 83, 45, 0.12);
+        border-radius: 20px;
+        padding: 28px 24px;
+        box-shadow: 0 4px 16px rgba(15, 56, 38, 0.06);
+      }
+      header {
+        border-bottom: 2px solid #fef3c7;
+        padding-bottom: 16px;
+        margin-bottom: 20px;
+      }
+      .badge {
+        display: inline-block;
+        background: #0f3826;
+        color: #fde68a;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 999px;
+      }
+      h1 {
+        color: #0f3826;
+        margin: 10px 0 4px;
+        font-size: 1.65rem;
+      }
+      h2 {
+        color: #14532d;
+        font-size: 1.15rem;
+        margin-top: 24px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 6px;
+      }
+      .meta {
+        color: #64748b;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="badge">100% Local-First · Zero Ads · Zero Tracking</span>
+        <h1>Ilmizo Privacy Policy</h1>
+        <p class="meta">
+          App Package: <code>com.ilmizo.tarbiyah</code> · Effective Date: November 13, 2026
+        </p>
+      </header>
+
+      <p>
+        <strong>Ilmizo — Islamic Learning &amp; Family Tarbiyah</strong> is built around a strict
+        local-first privacy commitment for adults, parents, and children. We do not require accounts,
+        do not serve third-party advertisements, and do not operate analytics or behavioral tracking
+        SDKs.
+      </p>
+
+      <h2>1. Data Stored Locally on Your Device</h2>
+      <ul>
+        <li>
+          <strong>Learning &amp; Family Records:</strong> Quran reading progress, Hifz revision
+          schedules, Salah logs, journal notes, kids profiles, stars, badges, and parent screen-time
+          rules are stored locally on your device in IndexedDB and LocalStorage.
+        </li>
+        <li>
+          <strong>Parent PIN &amp; Recovery Security:</strong> Parent PINs and recovery codes are
+          hashed on-device using PBKDF2-SHA256 via the browser/WebView Web Crypto API. Plaintext
+          PINs are never stored or transmitted.
+        </li>
+        <li>
+          <strong>Backups &amp; Sync Bundles:</strong> JSON and encrypted <code>.ilmizo-sync</code>
+          family files are exported and imported only when initiated manually by you.
+        </li>
+      </ul>
+
+      <h2>2. Permissions Used &amp; Why</h2>
+      <ul>
+        <li>
+          <strong>Notifications &amp; Exact Alarms (Optional):</strong> Used strictly to deliver local
+          on-device Azan and Salah reminders configured by you.
+        </li>
+        <li>
+          <strong>Microphone (Optional — Kids Practice Only):</strong> When a child taps the practice
+          microphone button, live audio amplitude is analyzed locally in memory for visual voice
+          feedback. Audio is <strong>never</strong> recorded, saved to disk, or uploaded to any
+          server.
+        </li>
+        <li>
+          <strong>Location (Optional):</strong> Used only when you choose to fetch local prayer
+          timings or calculate Qibla direction. Coordinates are never stored on external Ilmizo
+          servers.
+        </li>
+        <li>
+          <strong>Internet Access (Optional):</strong> Used only when you explicitly request online
+          Qari audio recitations, Word-by-Word Quran dictionary downloads, or prayer timing lookups
+          from public Islamic APIs (such as AlQuran Cloud / Quran.com / AlAdhan).
+        </li>
+      </ul>
+
+      <h2>3. Children’s Privacy &amp; Google Play Families Compliance</h2>
+      <p>
+        Ilmizo’s Kids World is designed for safe family tarbiyah without ads, social feeds, in-app
+        purchases, external tracking links, or personal data collection from children. All child
+        profiles remain strictly on the family’s device under Parent Hub PIN control.
+      </p>
+
+      <h2>4. Deleting Your Data</h2>
+      <p>
+        You can delete or reset all local Ilmizo data at any time inside the app via
+        <em>More &gt; Local Data &amp; Backup</em> or by uninstalling the application from your
+        device.
+      </p>
+
+      <h2>5. Contact</h2>
+      <p>
+        For privacy questions regarding <code>com.ilmizo.tarbiyah</code>, contact the developer
+        listed on the Ilmizo Google Play Store page.
+      </p>
+    </main>
+  </body>
+</html>

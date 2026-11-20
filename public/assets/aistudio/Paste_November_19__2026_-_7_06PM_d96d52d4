@@ -1,0 +1,1275 @@
+ILMIZO — FLAGSHIP UI/UX TRANSFORMATION MASTER PROMPT
+
+Complete Repository Audit → Native-Feeling UI → 35-Screen Redesign → Implementation → Regression Testing
+
+You are acting as a Principal Product Designer, Senior Frontend Architect, Mobile UX Engineer, Accessibility Specialist, Android/iOS Experience Designer, and QA Lead.
+
+Your mission is to transform my existing Islamic family-learning application Ilmizo into a genuinely polished, premium, modern mobile application.
+
+This is an EXISTING application with established architecture, content, features, assets, local data, navigation, and business logic.
+
+This is NOT a greenfield project.
+
+Do not rebuild the application from scratch.
+
+Do not replace working functionality with mock screens.
+
+Do not redesign only the Home screen while leaving the rest of the application inconsistent.
+
+Your job is to inspect the actual repository, verify the supplied UI audit, repair confirmed issues, implement the improvements across the entire application, and test the result.
+
+⸻
+
+PHASE 0 — NON-NEGOTIABLE RULES
+
+1. Inspect the actual repository and current application before making changes.
+2. Verify every audit finding against the real source code.
+3. Never assume reported file counts, screen counts, component counts, or CSS measurements are still accurate.
+4. Preserve existing working functionality, content, user progress, local databases, assets, and navigation capabilities.
+5. Do not delete a feature simply to make a screen look cleaner.
+6. Do not introduce fake data, placeholder screens, hardcoded success states, or simulated functionality.
+7. Do not create duplicate databases, audio engines, state-management systems, design systems, or entitlement systems.
+8. Do not introduce mandatory login, Firebase, Supabase, cloud synchronization, analytics, telemetry, or external tracking.
+9. Preserve the application’s local-first and offline-first architecture.
+10. Do not put API keys, Gemini credentials, or private secrets inside frontend code or APK assets.
+11. Keep Gemini/AI functionality optional and online-only unless a genuine on-device model already exists.
+12. Do not modify Islamic source text, verified Quran content, Hadith references, or religious translations during visual redesign.
+13. Do not change subscription prices, billing products, or entitlement boundaries.
+14. Do not claim that an improvement is complete until the actual implementation and relevant verification support that claim.
+15. Do not stop after writing a report. Implement the confirmed improvements wherever the available environment permits.
+16. Preserve existing uncommitted user changes and inspect Git status before editing.
+17. Use small, reversible, focused changes.
+18. If a task is blocked, document the exact reason and continue with independent work.
+
+Definition of done: The existing application looks and behaves more like a coherent premium mobile product, its original functionality remains intact, and the improvements are supported by actual testing.
+
+⸻
+
+PHASE 1 — COMPLETE REPOSITORY AND UI AUDIT
+
+Before editing, inspect the actual project.
+
+Identify:
+
+* Framework and frontend architecture.
+* Application entry points.
+* Main navigation and routing.
+* All adult-mode screens.
+* All kids-mode screens.
+* Parent Hub screens.
+* Shared components.
+* Design tokens and CSS variables.
+* Theme implementation.
+* Bottom navigation components.
+* Header components.
+* Modal, dialog and bottom-sheet implementations.
+* All form controls and dropdowns.
+* Audio playback and download architecture.
+* Local database and storage implementation.
+* Responsive layout rules.
+* PWA and Capacitor configuration, if present.
+* Existing unit, integration and end-to-end tests.
+
+Inspect the actual files and their dependencies before modifying them.
+
+Verify the supplied audit
+
+The following are audit claims, not facts that may be blindly assumed:
+
+* Approximately 35 application screens.
+* Approximately 33 native HTML select controls.
+* Approximately 103 uses of 9px/10px text.
+* Approximately 39 MobileStatusBar calls.
+* Approximately 32 screens not using the shared ScreenHeader.
+* Approximately 13,700 lines across four major screen files.
+* Existing duplicate global and page-level headers.
+* A production-visible developer Screens drawer.
+* Fixed min-height mockup layouts.
+* A fake iOS home-indicator element.
+* Inconsistent dark-mode coverage.
+* Missing persistent mini audio player.
+* Inconsistent loading states.
+
+Run source-code searches and inspect the relevant UI visually where possible.
+
+Produce a verified inventory:
+
+Audit item	Actual finding	Confirmed?	Action
+Duplicate global header	Inspect	Yes/No	Fix/Leave
+Developer Screens drawer	Inspect	Yes/No	Fix/Leave
+Native select controls	Count	Yes/No	Replace selectively
+Tiny text	Measure	Yes/No	Improve
+Bottom navigation	Inspect	Yes/No	Simplify
+Theme coverage	Inspect	Yes/No	Unify
+Mobile viewport	Inspect	Yes/No	Fix
+Audio mini-player	Inspect	Yes/No	Implement if missing
+
+Do not invent scan results.
+
+⸻
+
+PHASE 2 — ESTABLISH A PREMIUM ILMIZO DESIGN SYSTEM
+
+The entire application must feel like one carefully designed product.
+
+2.1 Preserve the brand identity
+
+Use the existing Ilmizo brand direction:
+
+* Deep Emerald as the primary identity.
+* Warm Ivory as the primary light surface.
+* Restrained Gold as a premium accent.
+* Calm neutral surfaces.
+* No unnecessary purple/blue AI-style gradients.
+* No excessive glassmorphism.
+* No random gradients on every card.
+* No excessive borders, shadows, or decorative icons.
+
+The design should feel:
+
+* Peaceful.
+* Premium.
+* Trustworthy.
+* Warm.
+* Islamic without looking outdated.
+* Modern without looking like a generic AI-generated dashboard.
+
+Preserve existing Mizo artwork, Ayaan/Ayla assets, illustrations, custom icons, and brand assets.
+
+Do not replace original assets with generic emoji.
+
+2.2 Centralized design tokens
+
+Create or improve a single design-token system.
+
+Centralize:
+
+* Primary, secondary and accent colors.
+* Light and dark surface colors.
+* Text colors.
+* Semantic success, warning, error and information colors.
+* Spacing scale.
+* Card padding.
+* Corner radii.
+* Typography scale.
+* Icon sizing.
+* Button heights.
+* Input heights.
+* Sheet radii.
+* Elevation and shadows.
+* Animation durations.
+* Motion curves.
+* Safe-area spacing.
+
+Use semantic tokens rather than screen-specific hardcoded colors.
+
+Example conceptual tokens:
+
+--color-primary
+
+--color-background
+
+--color-surface
+
+--color-surface-elevated
+
+--color-text-primary
+
+--color-text-secondary
+
+--color-border-subtle
+
+--color-success
+
+--color-warning
+
+--color-danger
+
+--space-1 through --space-8
+
+--radius-sm, --radius-md, --radius-lg, --radius-xl
+
+Adapt names to the existing project’s conventions.
+
+Do not create a second competing design system.
+
+2.3 Typography
+
+Improve typography consistently.
+
+Targets:
+
+* Primary screen headings: clear, confident hierarchy.
+* Body text: comfortable reading size.
+* Secondary labels: normally 12px or above.
+* Tiny captions: avoid going below 11px except for genuinely nonessential decorative metadata.
+* Arabic: preserve correct Arabic fonts, shaping, diacritics, RTL and line height.
+* English, Hindi and Urdu: maintain readable typography.
+* Buttons and controls: readable without zooming.
+
+Remove unnecessary uppercase micro-labels.
+
+Avoid overly condensed text.
+
+Do not increase every font indiscriminately if it breaks layout. Rework spacing and hierarchy together.
+
+⸻
+
+PHASE 3 — REMOVE WEB-PAGE AND DEVELOPER-PROTOTYPE FEEL
+
+This is one of the highest-priority transformations.
+
+3.1 Remove the permanent global web header
+
+Inspect the existing global sticky header containing combinations of:
+
+* Adult.
+* Kids.
+* Parent.
+* Journal.
+* Screens.
+* Sound.
+* Language.
+
+If this header is currently displayed to normal users in production, remove the developer-style global toolbar from the consumer experience.
+
+Do not remove the underlying functionality.
+
+Move necessary actions into appropriate places:
+
+* Mode switching into a compact mode switcher, profile area, or contextual control.
+* Language into Settings or an appropriate language selector.
+* Sound preferences into Settings.
+* Journal into the existing Quran Journal destination.
+* Parent Hub access into the appropriate family/mode entry point.
+
+Do not duplicate controls across the same screen.
+
+3.2 Remove the developer Screens menu from production
+
+Remove numbered screen-jump navigation from the normal consumer interface.
+
+Examples of unwanted production labels:
+
+* 1.	Adult Home
+* 2.	Quran Surah List
+* 3.	Quran Reading
+* 16.	More / Settings
+
+If this is useful for development, retain it behind a development-only flag or debug build.
+
+It must not appear in normal production builds.
+
+Preserve legitimate user navigation and deep links.
+
+Fix stale story-count labels only after verifying the real number of stories from the actual content data.
+
+3.3 Eliminate duplicate headers
+
+Every screen must have one clear visual header hierarchy.
+
+Do not stack:
+
+* A permanent global header.
+* A second hero header.
+* A duplicate mode selector.
+* A second language selector.
+
+Use a consistent shared screen-shell pattern.
+
+A screen may have a compact contextual header, a hero header, or a reader toolbar depending on its purpose, but must not display redundant controls.
+
+⸻
+
+PHASE 4 — CREATE AND ADOPT A SHARED SCREEN SHELL
+
+Inspect existing reusable components first.
+
+Improve or create shared equivalents of:
+
+* AppShell.
+* ScreenContainer.
+* ScreenHeader.
+* ScreenContent.
+* SectionHeader.
+* StandardCard.
+* PrimaryButton.
+* SecondaryButton.
+* IconButton.
+* SearchField.
+* EmptyState.
+* ErrorState.
+* LoadingSkeleton.
+* NativeStyleBottomSheet.
+* ConfirmationDialog.
+* ProgressIndicator.
+
+These must follow the existing framework and architecture.
+
+Requirements
+
+* Consistent page padding.
+* Consistent header height.
+* Consistent card radius.
+* Consistent section spacing.
+* Consistent button sizes.
+* Consistent icon alignment.
+* Consistent loading and empty states.
+* Responsive layouts.
+* Correct safe-area handling.
+
+Adopt these primitives across the actual screens.
+
+Do not merely create reusable components and leave most screens untouched.
+
+Do not force every screen into an identical layout. A Quran reader, Tasbih counter, children’s storybook and Settings page have different interaction needs.
+
+The objective is consistent design language, not identical screens.
+
+⸻
+
+PHASE 5 — NAVIGATION REDESIGN
+
+Simplify navigation without deleting functionality.
+
+5.1 Adult navigation
+
+Target structure:
+
+1. Home
+2. Quran
+3. Salah
+4. Learn
+5. More
+
+Place the existing Hifz and Progress functionality inside the appropriate Learn destination or a clear secondary navigation structure.
+
+Ensure:
+
+* Hifz remains easy to access.
+* Progress remains easy to access.
+* No feature disappears.
+* No duplicate route is created.
+* Back navigation works correctly.
+* Current selected tab is clear.
+* Icons and labels remain readable.
+
+5.2 Kids navigation
+
+Target structure:
+
+1. Home
+2. Qaida
+3. Stories
+4. Map
+5. Stars
+
+Place the existing Quran, Adventure, learning, quiz, badges and progress functions in suitable destinations within the existing structure.
+
+Preserve all existing children’s functionality.
+
+Do not make navigation harder for children.
+
+Use larger touch targets and recognizable illustrations where appropriate.
+
+5.3 Remove fake home indicator
+
+Inspect the Kids bottom navigation for any manually rendered fake iOS home-indicator line.
+
+If it duplicates the real system indicator, remove it.
+
+Use proper safe-area insets and native platform behavior.
+
+Do not manually draw system UI that the operating system already renders.
+
+⸻
+
+PHASE 6 — REPLACE INAPPROPRIATE HTML SELECT CONTROLS
+
+Audit every actual <select> in the application.
+
+Do not blindly replace every control with a bottom sheet.
+
+Choose the appropriate interaction for each field.
+
+Use a mobile-style bottom sheet for:
+
+* Quran reciter.
+* Translation language.
+* Child selection.
+* Calculation method.
+* Surah selection when the list is large.
+* Expense categories.
+* Download content selection.
+* Story categories.
+* Filters and multi-option settings.
+
+Use suitable native-style controls for:
+
+* Dates.
+* Times.
+* Numeric values.
+* Simple binary settings.
+* Short, obvious choices.
+
+Bottom-sheet requirements
+
+* Rounded upper corners.
+* Smooth open/close transitions.
+* Dimmed backdrop.
+* Correct safe-area padding.
+* Clear title.
+* Search where the option list is long.
+* Selected-state indicator.
+* Accessible touch targets.
+* Scrollable option list.
+* Clear cancel/dismiss behavior.
+* Keyboard handling.
+* Screen-reader support.
+* Light and dark themes.
+* Correct persistence of selected values.
+
+Do not build a custom bottom sheet that breaks keyboard navigation or screen readers.
+
+Reuse one reliable implementation wherever possible.
+
+Maintain existing form validation and state updates.
+
+⸻
+
+PHASE 7 — GLOBAL DARK MODE AND LIGHT MODE
+
+Dark mode must work across the complete application.
+
+Implement:
+
+* Light.
+* Dark.
+* System.
+
+Use the existing theme mechanism if present.
+
+Requirements:
+
+1. Every screen uses semantic theme tokens.
+2. No unthemed white backgrounds remain in dark mode.
+3. No unreadable dark text on dark cards.
+4. No random black or grey patches.
+5. Dialogs, sheets, dropdown replacements, navigation and overlays follow the theme.
+6. Arabic text remains readable.
+7. Charts and progress indicators remain understandable.
+8. Status/navigation bar appearance is appropriate.
+9. Theme selection persists locally.
+10. System mode follows the device appearance.
+11. Theme changes do not cause a white flash.
+12. Theme changes do not reset user data.
+
+Test every screen in Light, Dark and System modes.
+
+Keep the existing emerald/ivory/gold identity consistent in both themes.
+
+⸻
+
+PHASE 8 — SEVEN HIGH-PRIORITY SCREEN REDESIGNS
+
+Redesign the following screens first.
+
+8.1 More / Settings
+
+Current concern: too many controls and technical settings displayed together.
+
+Create a calm, grouped settings experience.
+
+Possible groups:
+
+Account & Profile
+
+* Profile.
+* Learning goals.
+* Family information where already supported.
+
+App Appearance
+
+* Light/Dark/System.
+* Language.
+* Accessibility.
+
+Learning
+
+* Learning preferences.
+* Notifications.
+* Quran preferences.
+
+Audio
+
+* Reciter.
+* Playback settings.
+* Download management.
+
+Storage & Privacy
+
+* Local storage.
+* Backup and restore.
+* Clear cache.
+* Privacy information.
+
+About Ilmizo
+
+* Version.
+* Credits.
+* Help.
+* Legal information.
+
+Use grouped list rows and contextual sheets.
+
+Do not put 30 controls into one long form.
+
+Do not remove any existing setting.
+
+8.2 Parent Hub
+
+Redesign into three clear sections:
+
+1. Overview.
+2. Profiles.
+3. Safety.
+
+Preserve:
+
+* Parent PIN.
+* Multiple child profiles.
+* Child-specific progress.
+* Screen-time vouchers.
+* Parent voice recording.
+* Safety settings.
+* Existing parental controls.
+
+Requirements:
+
+* Clear child selector.
+* Strong profile separation.
+* Easy-to-understand controls.
+* No technical security jargon in consumer-facing copy.
+* Confirmations for sensitive actions.
+* Parent authentication remains intact.
+* No weakening of child protection.
+
+Do not display security implementation details such as PBKDF2 in normal UI.
+
+Do not make false promises about device-level protection.
+
+8.3 Tasks & Sadaqah
+
+Transform the screen from a CRUD-style web dashboard into a calm daily activity experience.
+
+Requirements:
+
+* Clear page heading.
+* Today’s task list.
+* Completion states.
+* Relevant Sadaqah/charity information.
+* Simple expense/charity entry.
+* Add action using a bottom sheet or suitable native-style form.
+* Readable cards.
+* Clear empty states.
+* Edit/delete confirmations.
+* Local persistence.
+* Correct totals and calculations.
+
+Preserve all existing task and charity data.
+
+Do not fabricate completed deeds or transactions.
+
+8.4 Hifz Studio
+
+Make Hifz focused and distraction-free.
+
+Preserve:
+
+* Word Reveal.
+* Ayah hiding.
+* Repetition tracking.
+* Revision.
+* Memorization progress.
+* Existing scheduling and data.
+
+Improve hierarchy:
+
+1. Current Surah/Ayah.
+2. Practice mode.
+3. Reveal/hide interaction.
+4. Repeat controls.
+5. Progress.
+6. Next/review action.
+
+Move secondary controls into sheets or contextual menus.
+
+Avoid placing too many buttons and badges together.
+
+Create a focus mode only if it integrates with the existing state and navigation safely.
+
+8.5 Quran Reader
+
+Preserve the reader’s existing strong design.
+
+Improve:
+
+* Reciter picker.
+* Translation picker.
+* Reader toolbar hierarchy.
+* Audio playback controls.
+* Resume reading.
+* Bookmark interactions.
+* Reader settings.
+
+Arabic content must remain unchanged.
+
+Do not disrupt Mushaf page flow, verse navigation, translations or existing reading themes.
+
+8.6 Kids Home and Kids Inner Screens
+
+Preserve Mizo, Ayaan/Ayla assets and existing illustrations.
+
+Improve:
+
+* Larger touch targets.
+* Shorter child-friendly copy.
+* Clear daily quest hierarchy.
+* Playful but restrained feedback.
+* More immersive story reading.
+* Clear Qaida practice controls.
+* Better quiz answer feedback.
+* Readable Kids Progress.
+* Simple explanations of offline functionality.
+
+Do not expose IndexedDB, Cloud Sync Deferred or engineering terminology to children.
+
+Use simple copy such as:
+
+“Saved on this device”
+
+“Works offline”
+
+“Ready to practice”
+
+8.7 Parent and Adult inner-screen consistency
+
+Bring all remaining screens into the same visual language.
+
+Do not redesign only the seven priority screens and ignore the rest.
+
+⸻
+
+PHASE 9 — SCREEN-BY-SCREEN POLISH
+
+Audit and improve every actual screen.
+
+Use this checklist.
+
+Adult Mode
+
+1. Adult Home.
+2. Quran Surah List.
+3. Quran Reading / Mushaf.
+4. Quran Journal.
+5. Hifz Studio.
+6. Salah Tracker and Guides.
+7. Duas and Adhkar.
+8. 99 Names of Allah.
+9. Seerah Library.
+10. Islamic Lessons.
+11. Quizzes and Vocabulary.
+12. Progress and Stats.
+13. Qibla Compass.
+14. Tasbih Counter.
+15. Islamic Calendar.
+16. More / Settings.
+17. Profile.
+18. Tasks and Sadaqah.
+
+Kids World
+
+19. Kids Home.
+20. Today’s Quest.
+21. Juz Amma and Noorani Qaida.
+22. Recitation Practice.
+23. Kids Duas.
+24. Kids Salah Learning.
+25. Stories Library.
+26. Adventure Map.
+27. Daily Quiz.
+28. Good Deed Tracker.
+29. Family Challenge.
+30. Mission Complete.
+31. Kids Progress.
+32. Needs Practice.
+33. Badges and Certificates.
+34. Certificate Sharing.
+
+Parent Hub and Global Experience
+
+35. Parent Hub.
+
+This is a supplied audit inventory, not permission to invent screens. Verify the real routes and include additional screens discovered in the repository.
+
+For each screen check:
+
+* Header.
+* Typography.
+* Card hierarchy.
+* Spacing.
+* Buttons.
+* Input controls.
+* Loading state.
+* Empty state.
+* Error state.
+* Dark mode.
+* Safe areas.
+* Responsive behavior.
+* Accessibility.
+* Local data persistence.
+* Navigation.
+
+⸻
+
+PHASE 10 — MICRO-INTERACTIONS AND ANIMATION
+
+Add subtle, meaningful interactions.
+
+Examples:
+
+* Salah completion checkmark.
+* Tasbih tap ripple.
+* Bookmark confirmation.
+* Hifz progress feedback.
+* Quiz correct/incorrect response.
+* Kids star reward.
+* Story page transition.
+* Bottom-sheet spring motion.
+* Button press feedback.
+* Progress transitions.
+
+Requirements:
+
+* Motion must be fast and purposeful.
+* Respect reduced-motion preferences.
+* Avoid excessive bouncing and confetti.
+* Avoid animation that blocks interaction.
+* Preserve battery and performance.
+* Use existing haptic capabilities if available.
+* Never make an action appear successful before its underlying operation succeeds.
+
+Use animation to communicate state, not as decoration.
+
+⸻
+
+PHASE 11 — AUDIO MINI-PLAYER AND PLAYBACK EXPERIENCE
+
+Inspect the existing audio architecture before implementing anything.
+
+If a persistent mini-player is missing, add one that works with the existing playback engine.
+
+Requirements:
+
+* Quran playback can continue while navigating relevant screens.
+* Story playback follows the existing intended behavior.
+* Current content title is visible.
+* Play/pause works.
+* Close works.
+* Progress is displayed when available.
+* Expand/open reader action works.
+* Audio focus and interruptions are respected.
+* Lifecycle cleanup works.
+* No duplicate audio player is created.
+* Screen transitions do not accidentally start multiple players.
+* Offline audio works with verified downloaded assets.
+* Missing audio displays an honest unavailable state.
+
+The mini-player must respect bottom navigation and device safe areas.
+
+Do not introduce a second audio engine.
+
+Do not play unrelated content when an asset is unavailable.
+
+Do not generate fake recitations or claim that an unverified recording is authentic.
+
+⸻
+
+PHASE 12 — NATIVE-FEEL VIEWPORT AND RESPONSIVE LAYOUT
+
+Remove fixed mockup heights such as min-h-[760px] where they cause incorrect mobile layouts.
+
+Use actual viewport-aware layout rules appropriate to the existing framework.
+
+For web/PWA/Capacitor environments:
+
+* Use dynamic viewport units where supported.
+* Account for safe areas.
+* Avoid double bottom padding.
+* Avoid hidden controls behind browser/system bars.
+* Support keyboard resizing.
+* Avoid horizontal overflow.
+* Support small phones and large phones.
+* Support tablets and desktop sensibly.
+
+Desktop should look like a deliberate responsive application, not a narrow phone page floating inside a dark empty background.
+
+Mobile should feel like a full-screen app, not a desktop web page squeezed into a phone.
+
+Do not use fake device frames or mockup-only dimensions in production.
+
+Do not hardcode a fixed height that breaks on iPhone or Android devices.
+
+⸻
+
+PHASE 13 — LOADING, EMPTY AND ERROR STATES
+
+Replace generic loading indicators where appropriate with elegant skeleton states.
+
+Examples:
+
+* Quran Surah list skeleton.
+* Story library skeleton.
+* Progress card skeleton.
+* Dashboard summary skeleton.
+* Settings loading state where needed.
+
+Requirements:
+
+* Skeleton structure should resemble the real content.
+* Avoid excessive pulsing.
+* Respect reduced motion.
+* Avoid skeletons for extremely short operations.
+* Display useful empty states.
+* Display recoverable errors with clear actions.
+* Never show a permanent loading state after failure.
+* Never fabricate successful data.
+
+⸻
+
+PHASE 14 — REMOVE DEVELOPER JARGON FROM CONSUMER UI
+
+Search all user-visible text.
+
+Remove or rewrite technical phrases such as:
+
+* Local IndexedDB.
+* Cloud Sync Deferred.
+* Browser-level protection.
+* PBKDF2.
+* Reflowable Uthmani.
+* Internal storage identifiers.
+* Development-only labels.
+* Debug navigation names.
+
+Examples of suitable consumer-facing language:
+
+Technical wording	Better user-facing wording
+Local IndexedDB	Saved on this device
+Cloud Sync Deferred	Your data stays on this device
+Browser-level screen-time protection	App usage controls
+PBKDF2	Protected with your parent PIN
+Reflowable Uthmani	Adjustable Quran reading layout
+Cache management	Manage downloaded content
+
+Important:
+
+Only use a replacement statement if it is technically accurate.
+
+Do not promise that a PIN provides stronger protection than it actually does.
+
+Do not falsely claim that all data is encrypted if it is not.
+
+Keep necessary technical information in an appropriate privacy/help section, not primary consumer screens.
+
+Preserve meaningful legal disclosures.
+
+⸻
+
+PHASE 15 — OFFLINE-FIRST AND LOCAL-DATA PROTECTION
+
+This phase is mandatory.
+
+Ilmizo must remain local-first and offline-first.
+
+Preserve the actual existing storage architecture.
+
+Inspect and reuse the existing local database and storage systems.
+
+Requirements:
+
+* User profiles remain available offline.
+* Child profiles remain available offline.
+* Quran bookmarks and notes remain local.
+* Hifz progress remains local.
+* Learning history remains local.
+* Quiz history remains local.
+* Tasbih progress remains local.
+* Story completion remains local.
+* Settings remain local.
+* Download metadata remains local.
+* Backup and restore continue working.
+
+Do not introduce mandatory login.
+
+Do not require cloud access to open core screens.
+
+Do not create fake offline AI functionality.
+
+Gemini features, if already present, may work online when available, but the core application must not depend on Gemini.
+
+Do not silently add analytics or telemetry.
+
+Do not send children’s data to an external service.
+
+Do not change local database schemas unnecessarily.
+
+Do not overwrite existing local data during UI refactoring.
+
+Do not introduce a cloud sync architecture as part of this project.
+
+If the application already has an optional external integration, preserve its existing explicit consent and security boundaries.
+
+⸻
+
+PHASE 16 — ACCESSIBILITY AND INTERNATIONALIZATION
+
+Verify:
+
+* Screen reader labels.
+* Keyboard accessibility.
+* Focus order.
+* Touch target sizes.
+* Contrast.
+* Font scaling.
+* Reduced motion.
+* RTL layout.
+* Arabic shaping.
+* Hindi and Urdu text.
+* Dynamic text wrapping.
+* Form validation messages.
+* Accessible modal dismissal.
+
+Do not use color as the only indicator of success or error.
+
+Do not clip Arabic text or diacritics.
+
+Do not break long translations when increasing font sizes.
+
+⸻
+
+PHASE 17 — PERFORMANCE AND CODE QUALITY
+
+Inspect the largest components and their actual responsibilities.
+
+If large files are difficult to maintain, refactor incrementally.
+
+Do not split files merely to reduce line count.
+
+Do not rewrite state management without evidence.
+
+Prioritize:
+
+* Repeated rendering.
+* Unnecessary state updates.
+* Large lists.
+* Expensive calculations.
+* Excessive DOM nesting.
+* Unoptimized image loading.
+* Unnecessary audio initialization.
+* Blocking operations.
+* Duplicate components.
+* Unnecessary CSS overrides.
+
+Reuse existing dependencies where possible.
+
+Do not add a large UI library just to build a bottom sheet.
+
+Do not sacrifice performance for animation.
+
+⸻
+
+PHASE 18 — TESTING AND REGRESSION VERIFICATION
+
+Inspect existing test infrastructure before adding tests.
+
+Run the actual available commands.
+
+Examples, adapted to the project:
+
+* Existing test command.
+* TypeScript type checking.
+* Production build.
+* Lint.
+* Unit tests.
+* Component tests.
+* Browser tests.
+* PWA build checks.
+* Capacitor checks where configured.
+
+Add tests for:
+
+1. Navigation between all major destinations.
+2. Adult/Kids mode switching.
+3. Parent PIN and protected actions.
+4. Bottom navigation.
+5. Bottom-sheet selection and dismissal.
+6. Theme persistence.
+7. System theme behavior.
+8. Quran reader and audio controls.
+9. Mini-player persistence across navigation.
+10. Hifz state persistence.
+11. Tasks and Sadaqah calculations.
+12. Child progress persistence.
+13. Story playback.
+14. Offline operation.
+15. Backup and restore.
+16. Keyboard and safe-area behavior.
+17. Responsive layouts.
+18. Accessibility.
+19. Reduced-motion behavior.
+20. Error and empty states.
+
+Visual verification matrix
+
+Test representative screens in:
+
+Device/layout	Light	Dark	System
+Small phone	Test	Test	Test
+Standard phone	Test	Test	Test
+Large phone	Test	Test	Test
+Tablet	Test	Test	Test
+Desktop	Test	Test	Test
+
+Test every actual screen where feasible.
+
+If no real device is available, use supported browser emulation and explicitly state the limitation.
+
+Do not claim real iOS/Android native testing based only on a desktop browser.
+
+Do not claim that a PWA has become a fully native application merely because the CSS has improved.
+
+⸻
+
+PHASE 19 — IMPLEMENTATION ORDER
+
+Work in the following sequence:
+
+STAGE A — Repository inspection and baseline
+
+Verify all audit claims and preserve user changes.
+
+STAGE B — Global shell cleanup
+
+Remove production developer toolbar, Screens drawer and duplicate headers.
+
+STAGE C — Design system
+
+Unify tokens, typography, spacing, buttons, cards and screen shell.
+
+STAGE D — Navigation
+
+Implement the target five-tab adult and kids structures without removing functionality.
+
+STAGE E — Theme
+
+Complete Light/Dark/System coverage.
+
+STAGE F — Interaction components
+
+Replace inappropriate select controls and standardize bottom sheets.
+
+STAGE G — Priority screen redesign
+
+More/Settings, Parent Hub, Tasks/Sadaqah, Hifz Studio.
+
+STAGE H — Remaining screens
+
+Polish every other actual screen.
+
+STAGE I — Audio experience
+
+Implement or improve the persistent mini-player using the existing audio engine.
+
+STAGE J — Loading and micro-interactions
+
+Skeletons, subtle motion, haptics where supported.
+
+STAGE K — Responsive and accessibility
+
+Viewport, safe area, RTL, text scaling, keyboard, screen readers.
+
+STAGE L — Regression testing
+
+Run tests, inspect screenshots and compare against the baseline.
+
+Do not skip stages simply because the Home screen looks good.
+
+After each stage:
+
+1. Inspect the diff.
+2. Check for unintended behavior changes.
+3. Run relevant tests.
+4. Preserve working functionality.
+5. Record any blocker.
+6. Continue to the next stage.
+
+⸻
+
+PHASE 20 — ACCEPTANCE CRITERIA
+
+The work is not complete until the following are addressed.
+
+Visual quality
+
+* No duplicate global/page headers.
+* No developer Screens menu in production.
+* Consistent design system.
+* Readable typography.
+* Consistent cards and controls.
+* Correct dark mode.
+* Clear navigation.
+* No fake home indicator.
+* No fixed mockup height breaking mobile screens.
+* Clean Parent Hub.
+* Clean Settings.
+* Focused Hifz Studio.
+* Calm Tasks/Sadaqah.
+* Polished Quran reader.
+
+Mobile experience
+
+* Correct safe areas.
+* Correct keyboard behavior.
+* Responsive viewport.
+* No horizontal overflow.
+* Suitable mobile pickers.
+* Clear bottom navigation.
+* Accessible touch targets.
+* Smooth but restrained transitions.
+
+Functionality
+
+* Existing features preserved.
+* No lost local data.
+* Audio engine preserved.
+* Mini-player functional if implemented.
+* Quran content unchanged.
+* Parent security preserved.
+* Offline-first behavior preserved.
+* No mandatory cloud dependency.
+* No duplicate systems.
+
+Quality assurance
+
+* Actual tests executed.
+* Failures recorded.
+* Regressions fixed.
+* Visual comparison performed where possible.
+* Remaining blockers documented honestly.
+
+⸻
+
+PHASE 21 — FINAL ENGINEERING REPORT
+
+At completion, provide:
+
+A. Executive Summary
+
+What was actually improved?
+
+B. Verified Audit Findings
+
+For each original audit claim:
+
+* Confirmed.
+* Partially confirmed.
+* Not found.
+* Unable to verify.
+
+C. Implementation Report
+
+For every implemented change:
+
+* Root cause.
+* Files changed.
+* What changed.
+* Why it changed.
+* Tests performed.
+
+D. Screen Coverage
+
+List every actual screen reviewed and its status.
+
+E. Build and Test Results
+
+Check	Result	Evidence
+Type checking	PASS/FAIL/BLOCKED/NOT RUN	Actual output
+Production build	PASS/FAIL/BLOCKED/NOT RUN	Actual output
+Unit tests	PASS/FAIL/BLOCKED/NOT RUN	Actual output
+Integration tests	PASS/FAIL/BLOCKED/NOT RUN	Actual output
+Navigation tests	PASS/FAIL/BLOCKED/NOT RUN	Actual output
+Theme tests	PASS/FAIL/BLOCKED/NOT RUN	Actual output
+Offline tests	PASS/FAIL/BLOCKED/NOT RUN	Actual output
+Accessibility checks	PASS/FAIL/BLOCKED/NOT RUN	Actual output
+Mobile responsive checks	PASS/FAIL/BLOCKED/NOT RUN	Actual output
+
+Never report a test as passed unless it actually ran successfully.
+
+F. Remaining Issues
+
+List incomplete work and external blockers.
+
+G. Regression Assessment
+
+Explain which original features were tested and which still need physical device testing.
+
+H. Final Diff
+
+Summarize:
+
+* Added files.
+* Modified files.
+* Deleted files.
+* Dependencies changed.
+* Any data/schema changes.
+* Any unrelated changes.
+
+I. Honest UX Assessment
+
+Provide a before/after assessment based on actual visual evidence.
+
+Do not automatically give Ilmizo a 9/10 score.
+
+A high score must be justified by:
+
+* Consistency across screens.
+* Real device usability.
+* Accessibility.
+* Responsiveness.
+* Navigation clarity.
+* Interaction quality.
+* Stability.
+* Offline reliability.
+
+⸻
+
+FINAL COMMAND
+
+Begin by inspecting the actual repository.
+
+Verify the supplied audit instead of trusting its counts.
+
+Then implement the confirmed fixes in the prescribed order.
+
+Do not stop at suggestions, mockups, or a report.
+
+Do not redesign Ilmizo from scratch.
+
+Do not remove existing features.
+
+Do not compromise local-first/offline-first architecture.
+
+Do not invent successful tests or claim native functionality that has not been tested.
+
+The goal is not to make Ilmizo look like a generic dashboard with attractive cards. The goal is to make it feel like a coherent, trustworthy, premium Islamic mobile application across every screen, while preserving the product’s actual functionality and privacy principles.

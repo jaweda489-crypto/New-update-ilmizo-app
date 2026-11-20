@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="112" fill="#0F3826"/>
+  <rect x="28" y="28" width="456" height="456" rx="92" stroke="#F59E0B" stroke-width="6" stroke-opacity="0.45"/>
+  <!-- Crescent & Dome Motif -->
+  <path d="M256 96C198 96 152 142 152 200V236H360V200C360 142 314 96 256 96Z" fill="#14532D" stroke="#F59E0B" stroke-width="10"/>
+  <circle cx="256" cy="72" r="12" fill="#F59E0B"/>
+  <!-- Open Quran Book -->
+  <path d="M120 232C160 220 212 228 256 252C300 228 352 220 392 232V380C352 368 300 376 256 400C212 376 160 368 120 380V232Z" fill="#FDFBF7" stroke="#F59E0B" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M256 252V400" stroke="#D97706" stroke-width="10" stroke-linecap="round"/>
+  <!-- Star of Knowledge -->
+  <path d="M256 140L267 166L295 169L274 187L280 214L256 199L232 214L238 187L217 169L245 166L256 140Z" fill="#F59E0B"/>
+</svg>

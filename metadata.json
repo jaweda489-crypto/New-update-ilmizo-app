@@ -1,0 +1,6 @@
+{
+  "name": "Ilmizo — Adult & Kids Islamic Learning, Hifz, Salah & Tarbiyah",
+  "description": "A complete offline-first, multi-language Islamic learning platform for adults, children, and families featuring 114 Surahs, Hifz Mastery Studio, Salah Tracker, Kids 3D Learning World, Parent Hub, and Daily Task & Sadaqah Tracker.",
+  "requestFramePermissions": ["microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

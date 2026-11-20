@@ -1,0 +1,25 @@
+{
+	"appId": "com.ilmizo.tarbiyah",
+	"appName": "Ilmizo - Islamic Learning & Tarbiyah",
+	"webDir": "dist",
+	"bundledWebRuntime": false,
+	"server": {
+		"androidScheme": "https"
+	},
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 1800,
+			"backgroundColor": "#0F3826",
+			"showSpinner": false
+		},
+		"StatusBar": {
+			"style": "LIGHT",
+			"backgroundColor": "#0F3826"
+		},
+		"LocalNotifications": {
+			"smallIcon": "ic_stat_ilmizo_crescent",
+			"iconColor": "#14532D",
+			"sound": "adhan_makkah.wav"
+		}
+	}
+}

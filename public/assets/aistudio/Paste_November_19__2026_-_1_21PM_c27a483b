@@ -1,0 +1,1259 @@
+ILMIZO PHASE 14 — COMPLETE FLAGSHIP PREMIUM TRANSFORMATION
+
+Full UI/UX Upgrade + Offline-First Architecture + Native Android Experience + Kids Engagement + Quran Excellence + Production Hardening
+
+You are acting as a Principal Product Designer, Senior React/TypeScript Engineer, Capacitor and Android Engineer, Offline-First Architect, Accessibility Specialist, Islamic Content Reviewer, QA Lead and Release Engineer.
+
+Your mission is to transform my existing application Ilmizo into a polished, premium-quality Islamic learning and family application while preserving its existing functionality, user data, local-first architecture and product identity.
+
+This is an existing application, NOT a greenfield project.
+
+The objective is to close the gaps identified in the product review and implement practical solutions with measurable verification.
+
+Do not merely produce a plan or audit report. Inspect the repository, implement confirmed improvements, run tests and report actual results wherever the environment permits.
+
+⸻
+
+SECTION 0 — PRODUCT VISION AND NON-NEGOTIABLE RULES
+
+Product positioning
+
+Ilmizo should become:
+
+India’s Ad-Free, Offline-First Islamic Learning App for the Whole Family.
+
+Target audience:
+
+* Muslim families in India and South Asia.
+* Parents with young children.
+* Children learning Noorani Qaida, Quran, Salah and Islamic manners.
+* Teenagers who need a learning path between Kids and Adult modes.
+* Adults learning Quran, Salah and Islamic knowledge.
+* New Muslims who need structured beginner guidance.
+
+Product priorities:
+
+1. Trust and religious accuracy.
+2. Offline reliability.
+3. Excellent learning experience.
+4. Calm, premium UI/UX.
+5. Child-friendly interaction.
+6. Family privacy.
+7. Affordable, transparent pricing.
+8. Reliable Android and iOS experiences.
+
+Non-negotiable rules
+
+1. Inspect the actual repository before changing code.
+2. Preserve existing features, routes, data and established architecture.
+3. Do not rebuild the application from scratch.
+4. Do not delete existing user data.
+5. Do not replace real functionality with mock data.
+6. Do not fabricate Quran text, translations, Hadith, Dua references or religious rulings.
+7. Do not invent user research, ratings, competitor statistics or performance improvements.
+8. Do not introduce mandatory login or cloud database.
+9. Keep personal data local by default.
+10. Do not expose API keys in frontend code or APK.
+11. Do not make core learning dependent on Gemini or another online AI service.
+12. Keep existing Adult/Kids modes, bottom navigation and Mizo identity.
+13. Do not introduce duplicate databases, audio engines or entitlement systems.
+14. Use small, reviewable changes.
+15. Do not claim tests passed unless they actually ran.
+
+Existing bottom navigation
+
+Preserve:
+
+HOME | JOURNEY | QURAN | EXPLORE | PROFILE
+
+Preserve the existing Adult/Kids switch, Parent Hub, routes and established features.
+
+Visual identity
+
+Keep the existing warm premium identity:
+
+* Warm ivory backgrounds.
+* Deep emerald primary color.
+* Restrained gold accents.
+* Excellent Arabic typography.
+* Clear readable typography.
+* Soft, subtle shadows.
+* Consistent corner radii.
+* Calm transitions.
+* Generous spacing.
+* No excessive gradients.
+* No cluttered card grids.
+* No cheap-looking visual effects.
+* No unnecessary decorative elements.
+
+Do not copy Pillars, Duolingo, Tarteel or any competitor’s proprietary visual design. Use their usability principles as inspiration, not their branding or assets.
+
+⸻
+
+PHASE 1 — FULL CODEBASE AUDIT AND BASELINE
+
+Before implementation, inspect:
+
+* Repository structure.
+* React, TypeScript and Vite configuration.
+* Capacitor configuration.
+* Android native project.
+* iOS configuration, if available.
+* Existing navigation.
+* AdultModeView and KidsWorldView.
+* Quran reader and Quran content assets.
+* Qaida modules.
+* Storybook implementation.
+* Mizo, Ayaan and Ayla assets.
+* Audio engine and audio files.
+* IndexedDB/local database.
+* LocalStorage usage.
+* Download manager.
+* Backup/restore.
+* Billing and entitlement logic.
+* Prayer time and notification functionality.
+* Existing tests.
+* Build and CI configuration.
+
+The earlier report mentioned:
+
+* KidsWorldView around 4,944 lines.
+* AdultModeView around 3,951 lines.
+* Approximately 14 illustrations reused across 49 stories.
+* Approximately 510 KB of audio assets, including 28 Qaida letters.
+
+These are historical claims, not verified current measurements. Recount everything from the repository.
+
+Create an internal baseline:
+
+1. Existing features.
+2. Existing defects.
+3. Current storage architecture.
+4. Current offline capability.
+5. Existing audio assets.
+6. Existing image assets.
+7. Existing test coverage.
+8. Existing build status.
+9. Missing dependencies or configuration.
+10. Safe implementation order.
+
+Do not edit files until the baseline and dependency relationships are understood.
+
+⸻
+
+PHASE 2 — PREMIUM UI/UX: REMOVE CLUTTER
+
+Problem identified
+
+The app is feature-rich but may feel crowded. Too many cards, badges, buttons, notices and sub-tabs compete for attention.
+
+Required solution
+
+Redesign the presentation without removing the underlying features.
+
+2.1 Adult Home
+
+Create a calm, premium dashboard.
+
+The first screen should prioritize:
+
+1. Greeting and current learning context.
+2. One main Continue Learning action.
+3. Today’s Salah overview.
+4. Daily Quran goal.
+5. Small progress summary.
+6. A limited number of useful shortcuts.
+
+Do not show every available feature on the first screen.
+
+Use clear hierarchy:
+
+* One main hero action.
+* One secondary action.
+* Small supporting information.
+* Remaining tools accessible through navigation or dedicated sections.
+
+2.2 Kids Home
+
+Make Kids Home visual, simple and welcoming.
+
+Prioritize:
+
+* Child’s avatar and greeting.
+* One Continue Learning action.
+* Today’s learning mission.
+* Qaida/Quran learning progress.
+* One story recommendation.
+* One quiz or activity.
+* Mizo character interaction.
+
+Avoid displaying every achievement, badge, quest, notice and feature simultaneously.
+
+2.3 Feature discovery
+
+Move less frequently used tools into appropriate categories.
+
+Do not remove existing features.
+
+Use:
+
+* Search where useful.
+* Clear category labels.
+* Consistent iconography.
+* Short descriptions.
+* Simple navigation.
+* Clear back navigation.
+
+2.4 Design system
+
+Create or consolidate reusable design tokens:
+
+* Colors.
+* Typography.
+* Spacing.
+* Radius.
+* Shadows.
+* Elevation.
+* Icon sizes.
+* Touch target sizes.
+* Motion duration.
+* Button variants.
+* Card variants.
+
+Do not create inconsistent styles in individual screens.
+
+2.5 Responsive layouts
+
+Verify:
+
+* Small phones.
+* Large phones.
+* Tablets.
+* Desktop browsers.
+
+Do not display a fake phone frame or fake 9:41 status bar in normal desktop/tablet layouts.
+
+Use real native status/navigation bars on mobile where supported.
+
+Acceptance:
+
+* No overlapping elements.
+* No clipped content.
+* No unnecessary horizontal scrolling.
+* Consistent visual hierarchy.
+* Correct font scaling.
+* Correct RTL behavior.
+
+⸻
+
+PHASE 3 — FIRST 60 SECONDS ONBOARDING
+
+Problem identified
+
+New users may enter a large dashboard without understanding where to begin.
+
+Required solution
+
+Create a short, optional onboarding experience.
+
+Adult onboarding
+
+Ask only what is necessary:
+
+1. Preferred language.
+2. Learning goal.
+3. Current learning level.
+4. Optional daily learning duration.
+
+Kids onboarding
+
+Parent-controlled setup:
+
+1. Child profile name or nickname.
+2. Age range.
+3. Learning goal:
+    * Noorani Qaida.
+    * Quran reading.
+    * Salah.
+    * Duas.
+    * Islamic stories.
+4. Optional daily learning time.
+
+Do not require a real date of birth when an age range is sufficient.
+
+Do not collect unnecessary child information.
+
+Personalized plan
+
+Generate a simple local learning plan using existing content.
+
+Example:
+
+* Day 1: Qaida letter practice.
+* Day 2: Short vowel practice.
+* Day 3: Listening and recognition.
+* Day 4: Revision.
+* Day 5: Short quiz.
+* Day 6: Story and learning.
+* Day 7: Weekly review.
+
+The plan must adapt to the selected goal and actual available content.
+
+Do not promise mastery or learning outcomes that cannot be measured.
+
+Privacy
+
+* Store onboarding choices locally.
+* Allow editing later.
+* Allow skipping.
+* Never upload child details automatically.
+* Do not force account creation.
+
+⸻
+
+PHASE 4 — LIVING MIZO MASCOT
+
+Problem identified
+
+Static character images can make the children’s experience feel less interactive.
+
+Required solution
+
+Upgrade Mizo, Ayaan and Ayla with lightweight local animations.
+
+4.1 Animation states
+
+Create reusable animation states:
+
+* Idle.
+* Blink.
+* Happy.
+* Thinking.
+* Encouraging.
+* Celebrating.
+* Gentle disappointment.
+* Listening.
+* Teaching.
+* Sleeping/resting.
+
+4.2 Trigger examples
+
+Qaida:
+
+* Correct tracing: subtle happy reaction.
+* Incorrect tracing: gentle encouraging reaction.
+* Completed practice: celebration.
+
+Quiz:
+
+* Correct answer: happy reaction.
+* Incorrect answer: encouraging reaction.
+* Quiz completion: celebration.
+
+Stories:
+
+* Idle or listening animation.
+* Optional scene-specific expressions.
+
+Daily plan:
+
+* Greeting.
+* Encouragement.
+* Completion reaction.
+
+4.3 Technical implementation
+
+Prefer:
+
+* Lottie animations.
+* Rive if supported by the existing architecture and licensing.
+* Lightweight SVG/CSS animations when appropriate.
+
+All required animation assets must be bundled locally.
+
+Do not load animation files from a remote server for normal operation.
+
+Do not use excessive animation.
+
+Respect Android/iOS reduced-motion preferences.
+
+Do not animate every component continuously.
+
+4.4 Asset integrity
+
+Inspect existing character assets.
+
+Preserve their appearance and identity.
+
+Do not replace them with unrelated AI-generated characters.
+
+If new animation artwork is required, create a consistent asset specification and document missing assets rather than pretending they exist.
+
+⸻
+
+PHASE 5 — INTERACTIVE NOORANI QAIDA EXCELLENCE
+
+Preserve and improve existing:
+
+* Letter tracing.
+* Letter recognition.
+* Letter joining.
+* Vowel practice.
+* Qaida lessons.
+* Audio mastery quizzes.
+
+5.1 Letter tracing
+
+Implement or improve:
+
+* Correct Arabic letter paths.
+* Touch and stylus input.
+* Smooth stroke rendering.
+* Start and end guidance.
+* Stroke direction where educationally appropriate.
+* Clear/reset.
+* Retry.
+* Correctness feedback.
+* Local progress.
+
+Do not mark an answer correct based solely on any touch inside the canvas.
+
+Use actual path comparison or suitable recognition logic.
+
+5.2 Audio mastery quiz
+
+Preserve the existing five-question quiz concept.
+
+Requirements:
+
+* Randomized questions from verified local content.
+* No duplicate questions within one quiz unless the pool is insufficient and this is disclosed.
+* Audio playback from downloaded/local files.
+* Clear answer feedback.
+* Local result storage.
+* Revision recommendations based on actual mistakes.
+
+Do not use an online AI call for routine quizzes.
+
+5.3 Offline behaviour
+
+Qaida tracing, letter joining, vowel exercises and quiz logic must work without internet.
+
+Downloaded audio must work offline.
+
+Missing audio must show a clear unavailable state, not play unrelated audio.
+
+⸻
+
+PHASE 6 — STORYBOOK AND KIDS CONTENT EXPANSION
+
+Problem identified
+
+The earlier report found 49 stories but only around 14 illustrations reused across them.
+
+Verify the actual count.
+
+6.1 Story structure
+
+Each story should support:
+
+* Title.
+* Age range.
+* Language.
+* Reading duration.
+* Learning objective.
+* Verified Islamic lesson where relevant.
+* Scene sequence.
+* Narration.
+* Illustration.
+* Completion status.
+* Optional quiz.
+* Source/review metadata where needed.
+
+6.2 Six-scene storybooks
+
+Preserve the existing six-scene concept if it is already implemented.
+
+Do not assume all stories have six scenes until verified.
+
+Each scene should have:
+
+* Appropriate text.
+* A relevant illustration.
+* Optional narration.
+* Clear page navigation.
+* Reading progress.
+* Offline availability.
+
+6.3 Unique artwork
+
+Audit all 49 stories.
+
+Create a story-to-artwork mapping.
+
+Prioritize the 10–15 most popular or foundational stories first.
+
+Do not reuse one generic image for unrelated scenes merely to claim every story has artwork.
+
+Use a consistent illustration style.
+
+Requirements:
+
+* Child-safe visuals.
+* Consistent character identity.
+* Clear visual storytelling.
+* Appropriate cultural representation.
+* No misleading religious imagery.
+* No unlicensed copied artwork.
+
+If artwork is unavailable, mark it as pending rather than pretending every story has unique illustrations.
+
+6.4 Narration
+
+For the most important stories, support high-quality human narration.
+
+Possible initial priority:
+
+* 10–15 core stories.
+* Hindi.
+* Urdu/Hinglish.
+* English where available.
+
+Do not assume the recording budget or claim a recording exists without an actual asset.
+
+Keep narration files local after installation or download.
+
+Use a shared, versioned audio asset rather than generating identical narration for every user.
+
+6.5 Audio storage
+
+Implement:
+
+* Local audio manifest.
+* Download status.
+* File size.
+* Duration when known.
+* Language.
+* Voice identity when verified.
+* Integrity check.
+* Retry and cancellation.
+
+Do not automatically generate 49 stories × multiple languages × multiple voices using Gemini for every user.
+
+Do not make routine story playback depend on paid AI generation.
+
+⸻
+
+PHASE 7 — DAILY 10-MINUTE LEARNING PLAN
+
+Create a local daily plan.
+
+The plan should adapt to:
+
+* User’s selected goal.
+* Age range.
+* Existing progress.
+* Available lessons.
+* Previous mistakes.
+* Revision schedule.
+
+Example structure:
+
+* 3 minutes: Qaida/Quran practice.
+* 2 minutes: Revision.
+* 2 minutes: Dua or vocabulary.
+* 3 minutes: Story or quiz.
+
+These are suggested durations, not mandatory learning rules.
+
+Requirements
+
+* One clear daily mission.
+* Progress indicator.
+* Pause/resume.
+* Local completion history.
+* Missed-day handling.
+* Weekly review.
+* No artificial streak penalties.
+* No fabricated completion.
+* No punishment for missed days.
+
+A user must be able to change the plan.
+
+Do not force a child to use the app for a fixed period.
+
+⸻
+
+PHASE 8 — WEEKLY WHATSAPP SHARE CARD
+
+Create a weekly progress summary that can be shared voluntarily.
+
+Card content
+
+Include only appropriate information:
+
+* Learning activities completed.
+* Lessons practiced.
+* Stories read.
+* Quiz results, if meaningful.
+* Revision completed.
+* Encouraging weekly message.
+
+Do not expose:
+
+* Sensitive child information.
+* Private notes.
+* Detailed recordings.
+* Parent-only information.
+* Unnecessary personal identifiers.
+
+Technical requirements
+
+* Generate card locally.
+* Use existing app design.
+* Support image export.
+* Use the native share sheet.
+* WhatsApp should be an available share destination when installed.
+* Do not automatically send messages.
+* Parent must approve sharing.
+* Do not upload the card to a server.
+
+Do not fabricate progress statistics.
+
+If no meaningful activity exists, show an honest empty state.
+
+⸻
+
+PHASE 9 — QURAN READER: MUSHAF AND STUDY EXPERIENCE
+
+Problem identified
+
+A card-based Quran reader may be good for learning but insufficient for serious daily recitation.
+
+Required solution
+
+Preserve the current reader and add an optional Mushaf reading experience.
+
+9.1 Reading modes
+
+Provide:
+
+1. Existing learning/card view.
+2. Mushaf page view.
+3. Study view where supported.
+
+Do not remove the current reader.
+
+9.2 Mushaf requirements
+
+Support a verified Indo-Pak or Madani Mushaf layout only when licensed and verified source assets are available.
+
+Requirements:
+
+* Correct page order.
+* Correct Surah and Ayah references.
+* Correct Arabic script.
+* Correct diacritics.
+* RTL layout.
+* Page navigation.
+* Bookmark current page.
+* Resume last page.
+* Optional night reading mode.
+* Font scaling where applicable.
+* Correct screen-reader handling.
+
+Do not reconstruct Quran pages using guessed layout or generated Arabic text.
+
+Do not label a custom reflowable reader as an authentic 15-line Mushaf.
+
+9.3 Offline content
+
+Store installed Quran text and required page assets locally.
+
+Allow optional download of additional translation or Mushaf packs.
+
+Do not require internet for installed Quran reading.
+
+9.4 Tafsir
+
+Only display Tafsir content from verified, properly attributed sources.
+
+Show the source and language.
+
+Do not invent Tafsir or scholarly references.
+
+⸻
+
+PHASE 10 — PRAYER WIDGET AND NOTIFICATIONS
+
+Problem identified
+
+Native home-screen prayer widgets and next-prayer notifications are missing or incomplete.
+
+Required solution
+
+Implement platform-appropriate features.
+
+10.1 Android home-screen widget
+
+Use native Android App Widget APIs.
+
+Show:
+
+* Next prayer.
+* Local prayer time.
+* Countdown.
+* Location/method status.
+* Last update status.
+
+Requirements:
+
+* Small and medium widget sizes.
+* Readable design.
+* Correct theme.
+* Tap to open relevant app screen.
+* Local update scheduling.
+* Battery-conscious updates.
+
+Do not assume a web component alone can create a native Android home-screen widget.
+
+10.2 Prayer countdown notification
+
+Use native Android notification support where appropriate.
+
+* Ask permission when required.
+* Let users enable/disable notifications.
+* Allow notification preferences.
+* Show next prayer and countdown.
+* Update safely when prayer times change.
+* Avoid excessive background polling.
+* Handle device reboot and timezone changes.
+* Respect Do Not Disturb and platform notification restrictions.
+
+Do not send unwanted notifications.
+
+10.3 Prayer time accuracy
+
+Verify:
+
+* Calculation method.
+* Madhhab/asr setting.
+* Location permission.
+* Timezone.
+* Daylight/time changes.
+* Manual adjustment.
+* Offline calculation.
+
+Never present stale prayer times as freshly verified.
+
+If location is unavailable, ask the user to choose a city or configure location manually.
+
+10.4 iOS support
+
+Investigate available iOS widget and notification capabilities separately.
+
+Do not claim Android widget functionality automatically works on iOS.
+
+Use WidgetKit/native implementation only when supported by the existing iOS project and toolchain.
+
+⸻
+
+PHASE 11 — NATIVE FEEL AND HAPTIC FEEDBACK
+
+Problem identified
+
+Capacitor WebView interaction may feel less tactile than a native app.
+
+Required solution
+
+Improve perceived responsiveness without rebuilding the entire app natively.
+
+Haptic interactions
+
+Use Capacitor Haptics where supported.
+
+Possible interactions:
+
+* Tasbih tap.
+* Qaida tracing success.
+* Quiz correct answer.
+* Lesson completion.
+* Navigation feedback only where appropriate.
+
+Requirements:
+
+* Keep haptics subtle.
+* Add user setting to disable haptics.
+* Respect platform capability.
+* Use no-op fallback when unsupported.
+* Do not use repeated vibration as a reward loop.
+* Never vibrate excessively.
+
+Gestures and navigation
+
+Improve:
+
+* Back navigation.
+* Safe-area handling.
+* Keyboard avoidance.
+* Touch targets.
+* Scroll behaviour.
+* Pull-to-refresh only where meaningful.
+* Native sharing.
+* Native audio lifecycle.
+
+Do not claim native 120Hz performance merely because CSS animations have been added.
+
+Measure frame performance on actual devices.
+
+⸻
+
+PHASE 12 — LOCAL-FIRST AND OFFLINE-FIRST ARCHITECTURE
+
+This section has higher priority than visual enhancements.
+
+12.1 Default storage model
+
+The user’s data must remain on their device by default.
+
+Inspect the existing architecture before selecting storage technology.
+
+Use appropriate existing components:
+
+* IndexedDB for structured web-app data.
+* Capacitor Filesystem for files and downloaded content.
+* Existing SQLite/Room database where already established.
+* LocalStorage only for small settings.
+
+Do not create parallel databases.
+
+Store:
+
+* Adult and child profiles.
+* Learning progress.
+* Quran notes and bookmarks.
+* Hifz records.
+* Quiz history.
+* Story completion.
+* Tasbih history.
+* Daily plan.
+* Settings.
+* Download metadata.
+
+12.2 Offline startup
+
+App startup sequence:
+
+1. Load local settings.
+2. Open local database.
+3. Load local progress.
+4. Render home screen.
+5. Check optional network services in the background only when appropriate.
+
+A missing API server must never block core app startup.
+
+12.3 Offline core features
+
+Must work without internet after required content is installed:
+
+* Quran text.
+* Installed translations.
+* Bookmarks and notes.
+* Hifz and revision.
+* Qaida tracing and practice.
+* Local quizzes.
+* Installed stories.
+* Downloaded narration.
+* Duas.
+* 99 Names.
+* Salah and Wudu lessons.
+* Tasbih.
+* Parent Hub.
+* Daily learning plan.
+* Backup and restore.
+
+12.4 AI features
+
+Gemini-powered features remain optional online services unless a genuinely accurate on-device implementation exists.
+
+When offline:
+
+* Show a clear offline message.
+* Preserve the rest of the app.
+* Do not fake AI responses.
+* Do not silently switch to unreliable content.
+
+Never embed API keys in the APK.
+
+12.5 Manual backup
+
+Implement a reliable versioned local backup.
+
+* Export user data.
+* Validate imported files.
+* Preview restore.
+* Avoid accidental overwrite.
+* Preserve schema compatibility.
+* Do not include large audio files unnecessarily.
+* Never merge unrelated users’ data without consent.
+
+Do not call manual backup multi-device synchronization.
+
+⸻
+
+PHASE 13 — LOCALIZATION AND ACCESSIBILITY
+
+Verify full support for:
+
+* English.
+* Hindi.
+* Urdu.
+* Hinglish.
+* Arabic.
+
+Requirements:
+
+* No untranslated hardcoded labels.
+* Correct Urdu and Arabic RTL.
+* Correct text alignment.
+* Correct punctuation.
+* Arabic font quality.
+* Font scaling.
+* Screen-reader labels.
+* Keyboard navigation where relevant.
+* Appropriate color contrast.
+* Accessible touch targets.
+* Reduced-motion preference.
+
+Create a localization coverage report.
+
+Do not claim complete translation if strings remain untranslated.
+
+Do not automatically translate religious content without review.
+
+⸻
+
+PHASE 14 — PREMIUM EXPERIENCE AND ACCESSIBILITY QA
+
+Test:
+
+* First launch.
+* Returning user.
+* Adult mode.
+* Kids mode.
+* Parent Hub.
+* Small phone.
+* Large phone.
+* Tablet.
+* Desktop.
+* Offline mode.
+* Low storage.
+* Slow network.
+* Interrupted downloads.
+* Process restart.
+* Device restart.
+
+Remove:
+
+* Fake device status bars in desktop views.
+* Broken buttons.
+* Empty placeholder screens.
+* Duplicate navigation.
+* Repeated generic story artwork where inappropriate.
+* Misleading progress indicators.
+* Unnecessary loading spinners.
+* Fake success messages.
+
+Do not remove legitimate features to make screens look cleaner.
+
+⸻
+
+PHASE 15 — PRICING, BILLING AND PRODUCT TRUST
+
+Preserve actual configured pricing and Play Billing products.
+
+The reported prices:
+
+* ₹199/year.
+* ₹499 lifetime.
+
+Treat these as product claims to verify against the actual repository and Play Console configuration.
+
+Do not change pricing without authorization.
+
+Verify:
+
+* Product IDs.
+* Purchase flow.
+* Pending states.
+* Cancellation.
+* Refunds.
+* Expiry.
+* Restore purchases.
+* Purchase acknowledgement.
+* Trusted entitlement verification.
+* Offline entitlement behaviour.
+
+Do not grant premium because an API request failed.
+
+Do not promise features that are not implemented.
+
+Keep pricing transparent.
+
+Do not claim that Ilmizo is better than Pillars, Tarteel, Quran.com or Duolingo without comparable evidence.
+
+Do not fabricate competitor prices, user counts, ratings or market share.
+
+⸻
+
+PHASE 16 — IMPLEMENTATION ORDER AND RELEASE GATES
+
+Follow these stages:
+
+Stage A — Repository audit
+
+No destructive changes.
+
+Stage B — UI decluttering
+
+Improve Adult Home and Kids Home.
+
+Stage C — Onboarding
+
+Implement local, optional onboarding.
+
+Stage D — Mizo animations
+
+Create lightweight local animations.
+
+Stage E — Qaida polish
+
+Tracing, audio quiz and feedback.
+
+Stage F — Storybooks
+
+Artwork mapping and local narration.
+
+Stage G — Daily learning
+
+Personalized daily plan and weekly share card.
+
+Stage H — Quran Mushaf
+
+Verified optional Mushaf reading mode.
+
+Stage I — Native features
+
+Prayer widget, notifications and haptics.
+
+Stage J — Offline architecture
+
+Local storage, downloads, backup and offline testing.
+
+Stage K — Localization/accessibility
+
+Coverage and device QA.
+
+Stage L — Billing and release
+
+Verify actual products and production configuration.
+
+After every stage:
+
+1. Inspect.
+2. Make minimal changes.
+3. Run relevant tests.
+4. Review the diff.
+5. Preserve user data.
+6. Record evidence.
+7. Continue unless a genuine blocker exists.
+
+Do not make every stage wait for unavailable external services.
+
+⸻
+
+PHASE 17 — TESTING REQUIREMENTS
+
+Run actual tests for:
+
+UI/UX
+
+* Home screen hierarchy.
+* Navigation.
+* Responsive layouts.
+* RTL.
+* Accessibility.
+
+Onboarding
+
+* Skip.
+* Resume.
+* Edit preferences.
+* Local persistence.
+* Child privacy.
+
+Qaida
+
+* Letter path accuracy.
+* Tracing completion.
+* Quiz randomization.
+* Audio playback.
+* Offline operation.
+
+Stories
+
+* Scene navigation.
+* Artwork mapping.
+* Audio availability.
+* Offline playback.
+* Completion tracking.
+
+Quran
+
+* Surah/Ayah mapping.
+* Page order.
+* Mushaf layout.
+* Bookmark persistence.
+* RTL and Arabic text integrity.
+
+Native Android
+
+* Widget updates.
+* Notification permissions.
+* Reboot handling.
+* Haptics.
+* Back navigation.
+
+Storage
+
+* App restart.
+* Device restart.
+* Database migration.
+* Interrupted write.
+* Backup and restore.
+* Corrupted backup.
+* Storage full.
+
+Offline
+
+* Fresh install without internet.
+* App launch without internet.
+* All installed core features.
+* Downloaded audio playback.
+* Optional AI unavailable state.
+* Recovery after reconnecting.
+
+Billing
+
+* Purchase.
+* Pending.
+* Cancellation.
+* Restore.
+* Expiry.
+* Offline entitlement.
+
+Never weaken existing tests to obtain a passing result.
+
+Use PASS, FAIL, BLOCKED and NOT RUN accurately.
+
+⸻
+
+PHASE 18 — FINAL REPORT
+
+Return the following:
+
+A. Executive summary
+
+What improved and what remains incomplete.
+
+B. Verified baseline
+
+Actual repository architecture and feature inventory.
+
+C. Defect-to-solution matrix
+
+Reported problem	Root cause	Solution	Files changed	Verification
+
+Cover all six major UI/UX gaps and all four proposed flagship improvements.
+
+D. Offline capability report
+
+Feature	Offline status	Evidence
+Quran	PASS/FAIL/BLOCKED	Actual test
+Qaida	PASS/FAIL/BLOCKED	Actual test
+Stories	PASS/FAIL/BLOCKED	Actual test
+Audio	PASS/FAIL/BLOCKED	Actual test
+Hifz	PASS/FAIL/BLOCKED	Actual test
+Parent Hub	PASS/FAIL/BLOCKED	Actual test
+Daily plan	PASS/FAIL/BLOCKED	Actual test
+Backup	PASS/FAIL/BLOCKED	Actual test
+
+E. Native feature report
+
+Android widget, notifications, haptics and iOS limitations.
+
+F. Religious content verification
+
+List verified content and content requiring review.
+
+G. Test report
+
+Actual commands, output and results.
+
+H. Files changed
+
+Additions, modifications and deletions.
+
+I. Remaining blockers
+
+Missing assets, licenses, credentials, devices or native build requirements.
+
+J. Product score
+
+Give separate scores for:
+
+* UI/UX.
+* Offline reliability.
+* Quran experience.
+* Kids experience.
+* Accessibility.
+* Android native integration.
+* Privacy.
+* Overall product readiness.
+
+Only give a score after inspecting and testing the application. Label subjective design assessments as subjective.
+
+K. Launch recommendation
+
+State whether the current build is:
+
+* Internal prototype.
+* Closed-testing candidate.
+* Production candidate.
+* Not ready.
+
+Give evidence for the decision.
+
+⸻
+
+FINAL INSTRUCTION
+
+Transform Ilmizo into a calm, premium, trustworthy and genuinely offline-first Islamic learning application.
+
+Do not chase competitor feature counts.
+
+Focus on:
+
+* A clean first impression.
+* Simple daily learning.
+* Excellent Qaida experience.
+* Beautiful and meaningful kids stories.
+* A reliable Quran reading experience.
+* A useful animated Mizo.
+* Native prayer conveniences.
+* Local privacy.
+* Dependable offline operation.
+
+The user’s data belongs on the user’s device by default.
+
+Definition of done: every reported gap is investigated, every confirmed defect has a practical solution, existing functionality and data are preserved, implementation is tested, and remaining limitations are reported honestly.
